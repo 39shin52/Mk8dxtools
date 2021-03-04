@@ -22,13 +22,13 @@ print("Will use lang '%s'" % (lang))
 # to the system locale settings for the default language
 # to use.
 
-im = Image.open('cut_No1.png')
+im = Image.open('cut_No3.png')
 #im_invert = ImageOps.invert(im)
 
 
 txt = tool.image_to_string(
  im,
- lang="jpn",
+ lang="jpn+eng",
  builder=pyocr.builders.TextBuilder()
 )
 # txt is a Python string

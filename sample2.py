@@ -10,12 +10,13 @@ if len(tools) == 0:
 # The tools are returned in the recommended order of usage
 tool = tools[0]
 
-im = Image.open('cut_No2.png').convert('RGB')
+im = Image.open('cut_No6_rate.png')
 im_invert = ImageOps.invert(im)
-im_invert.save('inverted.png')
+#im_invert.save('inverted.png')
 
+#for i in 6: 
 txt = tool.image_to_string(
-    im,
+    im_invert,
     lang="jpn+eng",
     builder=pyocr.builders.TextBuilder(tesseract_layout=6)
 )
